@@ -25,7 +25,6 @@ public class PaymentApplication {
     private PaymentService paymentService;
     @GetMapping("/payment")
     public String postPaymentIntent() throws StripeException {
-        System.out.printf("hello");
         return paymentService.createPaymentIntent();
     }
 }

@@ -1,7 +1,6 @@
 package com.example.payment;
 
 import com.google.gson.Gson;
-import com.google.gson.annotations.SerializedName;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
@@ -20,7 +19,7 @@ public class PaymentService {
     }
 
     public String createPaymentIntent() throws StripeException {
-        Stripe.apiKey = "sk_test_51OV4ZODWIjcWzX8v4L3QLljOl5BWMPW60P91bQdv16DTxvweiNGmDWnJr5ehRf5ubVgEUp0i4uSjppaIRaBlm63700ECTQHIR9";
+        Stripe.apiKey = "sk_test_51OXKSzEP1gGhSTU9swReY7OefCOveH9MIyDZ5qhHaKfvPmpS9BO6T2AI3mhp4qYfR826L6ydbeXSRIYYJMc16Zom00oJuiIoj9";
         PaymentIntentCreateParams params =
                 PaymentIntentCreateParams.builder()
                         .setAmount(Long.valueOf(19900))
