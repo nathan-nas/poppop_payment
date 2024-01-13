@@ -37,6 +37,6 @@ public class PaymentService {
         PaymentIntent paymentIntent = PaymentIntent.create(params);
 
         CreatePaymentResponse paymentResponse = new CreatePaymentResponse(paymentIntent.getClientSecret());
-        return paymentIntent.getClientSecret();
+        return gson.toJson(paymentResponse);
     }
 }
